@@ -61,7 +61,6 @@ jobs:
       - name: Print outputs
         run: |
           echo ${{ needs.release-prerequisites.outputs.next_version }}
-          echo ${{ needs.release-prerequisites.outputs.next_version }}
           echo ${{ needs.release-prerequisites.outputs.log_entry }}
 #      - name: Create Release on github
 #        id: create_release
