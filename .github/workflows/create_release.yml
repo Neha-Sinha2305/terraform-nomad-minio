@@ -81,7 +81,5 @@ jobs:
           title: "[Test issue for verifying github action] Update minio module to match the latest release version"
           body: "Update minio-module version in the following repos: https://github.com/fredrikhgrelland/terraform-nomad-presto\nhttps://github.com/fredrikhgrelland/terraform-nomad-hive"
 
-        - name: Print Id of the newly created issue
-          run: echo ${{ steps.my_step_id.create_issue.number }}
-
-
+      - name: Print Id of the newly created issue
+        run: echo ${{ steps.my_step_id.create_issue.number }}
