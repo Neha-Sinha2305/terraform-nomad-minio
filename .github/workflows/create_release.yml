@@ -70,7 +70,7 @@ jobs:
           prerelease: false
 
         - name: Print Id of the newly created issue
-          run: echo "hello"
+          run: echo "hello you"
 
 #      - name: Create follow up issue to update minio-module version in other modules that use it
 #        uses: maxkomarychev/oction-create-issue@v0.7.1
