@@ -59,15 +59,18 @@ jobs:
       - name: Create Release on github
         id: create_release
         uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ needs.release-prerequisites.outputs.next_version }}
           release_name: Release v${{ needs.release-prerequisites.outputs.next_version }}
           body: |
             ${{ needs.release-prerequisites.outputs.log_entry }}
-          draft: true
+          draft: false
           prerelease: false
+
+        - name: Print Id of the newly created issue
+          run: echo "hello"
 
 #      - name: Create follow up issue to update minio-module version in other modules that use it
 #        uses: maxkomarychev/oction-create-issue@v0.7.1
