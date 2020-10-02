@@ -59,6 +59,8 @@ jobs:
       - name: Create Release on github
         id: create_release
         uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ needs.release-prerequisites.outputs.next_version }}
           release_name: Release v${{ needs.release-prerequisites.outputs.next_version }}
